@@ -3,6 +3,7 @@ import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
 import "./authentication.styles.scss"
 
 const Authentication = () => {
+  document.title = "LOGIN - Crown Clothing"
   return (
     <div className="authentication-container">
       <SignInForm />

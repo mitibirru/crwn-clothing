@@ -3,6 +3,7 @@ import CategoriesPreview from "../categories-preview/categories-preview.componen
 import Category from "../category/category.component";
 
 const Shop = () => {
+  document.title = "SHOP - Crown Clothing"
   return (
     <Routes>
       <Route index element={<CategoriesPreview />} />

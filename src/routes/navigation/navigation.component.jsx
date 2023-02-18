@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { UserContext } from "../../context/user.context";
@@ -20,6 +20,7 @@ const Navigation = () => {
   const signOutHandler = async () => {
     await signOutUser();
   };
+
   return (
     <>
       <NavigationContainer>
@@ -29,7 +30,9 @@ const Navigation = () => {
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
           {currentUser ? (
-            <NavLink as="span" onClick={signOutHandler}>SIGN OUT</NavLink>
+            <NavLink as="span" onClick={signOutHandler}>
+              SIGN OUT
+            </NavLink>
           ) : (
             <NavLink to="/auth">SIGN IN</NavLink>
           )}

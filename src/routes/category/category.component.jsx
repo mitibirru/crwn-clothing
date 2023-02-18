@@ -9,6 +9,7 @@ const Category = () => {
   const { categoriesMap } = useContext(CategoriesContext);
   const [products, setProducts] = useState(categoriesMap[category]);
 
+  document.title = `${category.toUpperCase()} - Crown Clothing`;
   useEffect(() => {
     setProducts(categoriesMap[category]);
   }, [categoriesMap, category]);
